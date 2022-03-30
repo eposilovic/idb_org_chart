@@ -405,10 +405,9 @@ hr{
 
 /* ----FIREFIXES---- */
 
-.dept_details{
+*{
     scrollbar-color: #4cd8ff #e4e4e4;
     scrollbar-width: thin;
-    
 }
 
 /* ----FIREFIXES---- */
