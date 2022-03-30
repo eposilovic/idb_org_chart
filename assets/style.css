@@ -126,6 +126,7 @@ body{
     gap: 5px;
     width: 100%;
     justify-content: space-evenly;
+    margin-bottom: 40px;
 }
 
 .dept_details h4, .dept_details h5, .dept_details h6{
@@ -301,6 +302,10 @@ hr{
     display: none;
 }
 
+.country_info li a{
+    font-size: 14px;
+}
+
 .dept_head .dept_countries, .dept_sub .dept_countries{
     background: #3498dbe0;
     padding: 5px;
@@ -370,6 +375,7 @@ hr{
 .countries-list-h2{
     margin: 20px 0 35px;
     font-size: 30px;
+    font-weight: 500;
 }
 
 
@@ -395,3 +401,14 @@ hr{
 }
 
 /* ------RESPONSIVE------ */
+
+
+/* ----FIREFIXES---- */
+
+.dept_details{
+    scrollbar-color: #4cd8ff #e4e4e4;
+    scrollbar-width: thin;
+    
+}
+
+/* ----FIREFIXES---- */
