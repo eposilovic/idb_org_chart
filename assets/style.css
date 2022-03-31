@@ -100,7 +100,7 @@ body{
     flex-direction: row;
     gap: var(--main_gap);
     position: relative;
-    width: 100%;
+    width: auto;
     justify-content: space-evenly;
 }
 
@@ -204,8 +204,8 @@ body{
     content: "";
     position: absolute;
     top: -20px;
-    left: 7.4%;
-    width: 85.8%;
+    left: 6.8%;
+    width: 86.9%;
     height: 2px;
     background: #30c4ec;
 }
