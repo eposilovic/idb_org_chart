@@ -5,8 +5,10 @@ $(".country").on("click", function(e){
 
    $(target).find(".country_info").slideToggle();
    $(target).siblings().find(".country_info").delay(380).slideUp();
-
-   $('html,body').animate({ scrollTop: div_height * 5 }, 'slow');
+   if($(window).width() > 820)
+   {
+      $('html,body').animate({ scrollTop: div_height * 5 }, 'slow');
+   }
 });
 
 
