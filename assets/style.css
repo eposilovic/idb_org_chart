@@ -115,14 +115,16 @@ body{
     align-items: center;
     padding: 10px;
     border-radius: 50%;    
+    cursor: pointer;
 }
 
 .dept h3{
     margin-top: 2px;
 }
 
-.dept_details_box{
+.dept_details_box, .dept_head_wrap{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
     width: 100%;
@@ -160,7 +162,7 @@ body{
     border: 2px solid transparent;
 }
 
-.dept_details{
+.dept_details, .dept_head{
     height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -237,7 +239,7 @@ body{
     font-weight: 500;
 }
 
-.dept_details a{
+.dept_details a, .dept_head a{
     font-size: 12px;
     color: var(--main_blue);
     text-decoration: none;
@@ -309,27 +311,57 @@ hr{
 }
 
 .dept_head .dept_countries, .dept_sub .dept_countries{
-    background: #3498dbe0;
-    padding: 5px;
+    background: transparent;
+    filter: drop-shadow(2px 4px 6px #00000035);
     border-radius: 5px;
-    position: absolute;
-    left: -5px;
-    top: 70px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
-    width: 100%;
+    width: 60%;
     line-height: 1.4;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: default;
     display: none;
 }
 
 .dept_countries ul{
     margin: 0;
+    background-color: transparent;
+    text-align: left;
 }
 
 .dept_countries ul li{
     color: #fff;
-    margin: 0;
+    padding: 5px 10px;
+    margin: -1px 2px 0;
+    background: var(--main_grey);
     font-size: 18px;
     list-style: none;
+    cursor: pointer;
+    transition: .3s;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+}
+
+.dept_countries .close{
+    right: 0;
+    top: 4px;
+    background-color: var(--main_blue);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.dept_countries ul li:hover{
+    color: var(--main_black);
+}
+
+.dept_countries ul li:first-of-type{
+    margin-left: 0;
 }
 
 .dept_countries img{
@@ -380,7 +412,175 @@ hr{
     font-weight: 500;
 }
 
+.line{
+    height: 2px;
+    background-color: red;
+}
 
+.dept_popup_wrap{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.dept_popup{
+    width: min-content;
+    min-width: 75%;
+    position: fixed;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 3px 3px 5px #00000030;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 2;
+    background: linear-gradient(333deg, rgb(20 184 228) 0%, rgb(136 217 239) 75%);
+}
+
+.dept_popup div h4, .dept_popup div h5, .dept_popup div h6{
+    margin: 0;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 600;
+}
+
+.dept_popup_head h4{
+    font-size: 18px;
+}
+
+.dept_popup_head h5{
+    font-size: 15px;
+}
+
+.dept_popup_employees h5{
+    font-size: 15px;
+}
+
+.dept_popup_employees h6{
+    font-size: 12px;
+}
+
+.dept_popup_employees{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.close{
+    background-color: #fff;
+    color: var(--main_blue);
+    padding: 5px 10px 7px;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 22px;
+    position: absolute;
+    right: 15px;
+    transition: .3s;
+}
+
+.close:hover{
+    color: var(--main_black);
+}
+
+.dept_head{
+    border: 3px solid var(--main_blue);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 3px 3px 5px #00000030;
+    background: #ffffff75;
+    height: auto;
+    width: 220px;
+    word-break: break-word;
+    overflow: visible;
+}
+
+.dept_head h4, .dept_head h5{
+    margin: 5px;
+}
+
+.dept_head h5{
+    font-size: 11px;
+}
+
+.dept_head_wrap{
+    margin-bottom: 0;
+}
+
+.dept_head::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 23px;
+    background: #30c4ec;
+}
+
+.dept:hover .med_img{
+    box-shadow: 3px 3px 5px #00000030;
+    border: 2px solid #30c4ec;
+}
+
+.country_tab:first-of-type{
+    display: block;
+}
+
+.country_tab{
+    display: none;
+    padding: 5px;
+    color: #fff;
+    background: var(--main_blue);
+}
+
+.dept_countries ul li.tab_active{
+   background-color: var(--main_blue);
+}
+
+.country_tab_info{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.provider, .carrier{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    vertical-align: top;
+}
+
+.provider{
+    margin-bottom: 25px;
+}
+
+
+.provider::after{
+    left: 50%;
+    content: "";
+    position: absolute;
+    top: 23px;
+    width: 2px;
+    height: 20px;
+    background: #fff;
+}
 /* ------RESPONSIVE------ */
 
 @media(max-width:1800px){
@@ -389,7 +589,7 @@ hr{
         justify-content: center;
         text-align: center;
     }
-    .dept_details{
+    .dept_details, .dept_head{
         width: auto;
         max-width: 200px;
         box-sizing: border-box;
@@ -397,13 +597,10 @@ hr{
     .dept_countries ul{
         padding: 0;
     }
-    .dept_head .dept_countries, .dept_sub .dept_countries{
-        top: 60px;
-    }
 }
 
 @media(max-width: 1400px){
-    .org_box{
+    .org_box, .dept_head{
         padding: 2px;
         max-width: 150px;
         min-width: 100px;
@@ -414,7 +611,7 @@ hr{
     .org_box.org_header_2{
         max-width: none;
     }
-    .dept_details_box, .dept_box{
+    .dept_details_box, .dept_box, .dept_head_wrap{
         justify-content: center;
         gap: 5px;
     }
@@ -429,7 +626,7 @@ hr{
 }
 
 @media(max-width: 820px){
-    .dept_box, .dept_details_box, .managment_box{
+    .dept_box, .dept_details_box, .managment_box, .dept_head_wrap{
         flex-wrap: wrap;
         justify-content: center;
     }
