@@ -257,7 +257,7 @@ hr{
 .countries_wrap{
     display: flex;
     max-width: 1400px;
-    gap: 80px 100px;
+    gap: 5px;
     flex-wrap: wrap;
     padding: 0 50px;
     justify-content: center;
@@ -294,20 +294,42 @@ hr{
 .country_info{
     background: #fff;
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.226);
-    width: 230px;
+    width: 50%;
     gap: 10px;
     border: 3px solid var(--main_blue);
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 10px;
     list-style-type: none;
     line-height: 1.6;
+    text-align: center;
     word-break: break-word;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
     display: none;
+}
+
+.country_info ul{
+    display: inline-block;
+    padding: 0;
+}
+
+.country_info li{
+    margin: 10px 0;
 }
 
 .country_info li a{
     font-size: 14px;
+}
+
+.country_info li b{
+    display: block;
+    font-size: 18px;
 }
 
 .dept_head .dept_countries, .dept_sub .dept_countries{
@@ -547,11 +569,11 @@ hr{
     padding: 5px;
     text-align: center;
     color: #fff;
-    background: var(--main_blue);
+    background: linear-gradient(333deg, rgb(20 184 228) 0%, rgb(136 217 239) 75%);
 }
 
 .dept_countries ul li.tab_active{
-   background-color: var(--main_blue);
+    background: linear-gradient(112deg, rgb(20 184 228) 0%, rgb(136 217 239) 100%);
 }
 
 .country_tab_info{
@@ -612,6 +634,19 @@ hr{
     text-align: center;
     color: #fff;
 }
+
+.map-wrap{
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+    height: 600px;
+}
+
+#chartdiv{
+    height: 100%;
+    width: 100%;
+}
+
 /* ------RESPONSIVE------ */
 
 @media(max-width:1800px){

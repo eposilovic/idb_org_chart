@@ -68,3 +68,4 @@ $(".close").on("click", function(e){
    $(".country_tab").hide();
    $(".country_tab:first-of-type").show();
 });
+
