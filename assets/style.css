@@ -331,6 +331,7 @@ hr{
     margin: 0;
     background-color: transparent;
     text-align: left;
+    padding: 0;
 }
 
 .dept_countries ul li{
@@ -543,6 +544,7 @@ hr{
 .country_tab{
     display: none;
     padding: 5px;
+    text-align: center;
     color: #fff;
     background: var(--main_blue);
 }
@@ -587,7 +589,6 @@ hr{
     .dept_head, .dept_sub{
         flex-direction: column;
         justify-content: center;
-        text-align: center;
     }
     .dept_details, .dept_head{
         width: auto;
