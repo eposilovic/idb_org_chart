@@ -635,16 +635,33 @@ hr{
     color: #fff;
 }
 
-.map-wrap{
+.map_wrap{
     display: block;
-    padding: 20px 0;
+    padding: 20px 0 40px;
     width: 100%;
-    height: 600px;
+    text-align: center;
 }
 
-#chartdiv{
-    height: 100%;
-    width: 100%;
+path{
+    fill: lightgray; stroke: white;
+}
+
+[data-name="South Africa"], [data-name="Botswana"], [data-name="Egypt"], [data-name="Ghana"], [data-name="Greece"], [data-name="Pakistan"], [data-name="Poland"], [data-name="Saudi Arabia"], [data-name="Oman"], [data-name="Kuwait"], [data-name="Qatar"], [data-name="Romania"], [data-name="Canada"], [data-name="Serbia"], [data-name="Thailand"], [data-name="Bahrain"], [data-name="Bulgaria"], [data-name="Senegal"]{
+    fill: #4cd8ff;
+    transition: .3s;
+    cursor: pointer;
+}
+
+[data-name="South Africa"]:hover, [data-name="Botswana"]:hover, [data-name="Egypt"]:hover, [data-name="Ghana"]:hover, [data-name="Greece"]:hover, [data-name="Pakistan"]:hover, [data-name="Poland"]:hover, [data-name="Saudi Arabia"]:hover, [data-name="Oman"]:hover, [data-name="Kuwait"]:hover, [data-name="Qatar"]:hover, [data-name="Romania"]:hover, [data-name="Canada"]:hover, [data-name="Serbia"]:hover, [data-name="Thailand"]:hover, [data-name="Bahrain"]:hover, [data-name="Bulgaria"]:hover, [data-name="Senegal"]:hover{
+    fill: var(--main_blue);
+}
+
+
+.map_hover_text{
+    position: absolute;
+    color: var(--main_blue);
+    font-weight: 500;
+    font-size: 20px;
 }
 
 /* ------RESPONSIVE------ */

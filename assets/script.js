@@ -69,3 +69,16 @@ $(".close").on("click", function(e){
    $(".country_tab:first-of-type").show();
 });
 
+var countryElements = document.getElementById('countries').childNodes;
+    var countryCount = countryElements.length;
+    for (var i = 0; i < countryCount; i++) {
+      countryElements[i].onclick = function() {
+         var countryName = this.getAttribute('data-name'); 
+         if($(".country_info").hasClass(countryName).show())
+         {
+            
+         };
+      }
+    }
+
+
