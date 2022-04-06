@@ -5,10 +5,6 @@ $(".country").on("click", function(e){
    e.stopPropagation();
    $(target).find(".country_info").slideToggle();
    $(target).siblings().find(".country_info").delay(380).slideUp();
-   if($(window).width() > 820)
-   {
-      $('html,body').animate({ scrollTop: div_height * 5 }, 'slow');
-   }
 });
 
 
@@ -74,11 +70,18 @@ var countryElements = document.getElementById('countries').childNodes;
     for (var i = 0; i < countryCount; i++) {
       countryElements[i].onclick = function() {
          var countryName = this.getAttribute('data-name'); 
-         if($(".country_info").hasClass(countryName).show())
-         {
-            
-         };
+         if($(".country_info").hasClass(countryName)){
+         $('.'+countryName).slideDown();
+         }
       }
     }
 
-
+    for (var i = 0; i < countryCount; i++) {
+      countryElements[i].onmouseenter = function() {
+         var countryName = this.getAttribute('data-name'); 
+         $(".country_name").show().text(countryName);
+      }
+      countryElements[i].onmouseleave = function() {
+         $(".country_name").hide();
+      }
+    }

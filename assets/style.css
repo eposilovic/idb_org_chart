@@ -223,6 +223,7 @@ body{
     background: #30c4ec;
 }
 
+
 .dept::after{
     content: "";
     position: absolute;
@@ -260,22 +261,37 @@ hr{
     gap: 5px;
     flex-wrap: wrap;
     padding: 0 50px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .country{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 50px;
     cursor: pointer;
 }
 
 .country img{
-    width: 100px;
+    width: 50px;
     image-rendering: -webkit-optimize-contrast;
     filter: drop-shadow(2px 4px 6px #00000028);
     transition: .3s;
+}
+
+.country h4{
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+}
+
+.country_info img{
+    width: 100px;
+}
+
+.country_info h4{
+    font-size: 20px;
+    margin-top: 0;
 }
 
 .country:hover img{
@@ -317,6 +333,7 @@ hr{
 .country_info ul{
     display: inline-block;
     padding: 0;
+    list-style: none;
 }
 
 .country_info li{
@@ -430,7 +447,7 @@ hr{
 }
 
 .countries-list-h2{
-    margin: 20px 0 35px;
+    margin: 0 0 15px;
     font-size: 30px;
     font-weight: 500;
 }
@@ -579,12 +596,12 @@ hr{
 .country_tab_info{
     color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .provider, .carrier{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     color: #fff;
     display: inline-block;
     position: relative;
@@ -593,7 +610,8 @@ hr{
 }
 
 .provider{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 
@@ -603,7 +621,7 @@ hr{
     position: absolute;
     top: 23px;
     width: 2px;
-    height: 20px;
+    height: 15px;
     background: #fff;
 }
 
@@ -637,22 +655,23 @@ hr{
 
 .map_wrap{
     display: block;
-    padding: 20px 0 40px;
+    padding: 30px 0 40px;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 path{
     fill: lightgray; stroke: white;
 }
 
-[data-name="South Africa"], [data-name="Botswana"], [data-name="Egypt"], [data-name="Ghana"], [data-name="Greece"], [data-name="Pakistan"], [data-name="Poland"], [data-name="Saudi Arabia"], [data-name="Oman"], [data-name="Kuwait"], [data-name="Qatar"], [data-name="Romania"], [data-name="Canada"], [data-name="Serbia"], [data-name="Thailand"], [data-name="Bahrain"], [data-name="Bulgaria"], [data-name="Senegal"]{
+[data-name="South_Africa"], [data-name="Botswana"], [data-name="Egypt"], [data-name="Ghana"], [data-name="Greece"], [data-name="Pakistan"], [data-name="Poland"], [data-name="Saudi_Arabia"], [data-name="Oman"], [data-name="Kuwait"], [data-name="Qatar"], [data-name="Romania"], [data-name="Canada"], [data-name="Serbia"], [data-name="Thailand"], [data-name="Bahrain"], [data-name="Bulgaria"], [data-name="Senegal"], [data-name="Croatia"], [data-name="Spain"]{
     fill: #4cd8ff;
     transition: .3s;
     cursor: pointer;
 }
 
-[data-name="South Africa"]:hover, [data-name="Botswana"]:hover, [data-name="Egypt"]:hover, [data-name="Ghana"]:hover, [data-name="Greece"]:hover, [data-name="Pakistan"]:hover, [data-name="Poland"]:hover, [data-name="Saudi Arabia"]:hover, [data-name="Oman"]:hover, [data-name="Kuwait"]:hover, [data-name="Qatar"]:hover, [data-name="Romania"]:hover, [data-name="Canada"]:hover, [data-name="Serbia"]:hover, [data-name="Thailand"]:hover, [data-name="Bahrain"]:hover, [data-name="Bulgaria"]:hover, [data-name="Senegal"]:hover{
+[data-name="South_Africa"]:hover, [data-name="Botswana"]:hover, [data-name="Egypt"]:hover, [data-name="Ghana"]:hover, [data-name="Greece"]:hover, [data-name="Pakistan"]:hover, [data-name="Poland"]:hover, [data-name="Saudi_Arabia"]:hover, [data-name="Oman"]:hover, [data-name="Kuwait"]:hover, [data-name="Qatar"]:hover, [data-name="Romania"]:hover, [data-name="Canada"]:hover, [data-name="Serbia"]:hover, [data-name="Thailand"]:hover, [data-name="Bahrain"]:hover, [data-name="Bulgaria"]:hover, [data-name="Senegal"]:hover, [data-name="Croatia"]:hover, [data-name="Spain"]:hover{
     fill: var(--main_blue);
 }
 
@@ -662,6 +681,24 @@ path{
     color: var(--main_blue);
     font-weight: 500;
     font-size: 20px;
+}
+
+.country_name{
+    font-weight: 500;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 5px #00000030;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: var(--main_blue);
+    top: -10px;
+    display: none;
 }
 
 /* ------RESPONSIVE------ */
@@ -741,3 +778,4 @@ path{
 }
 
 /* ----FIREFIXES---- */
+
