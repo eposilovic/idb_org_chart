@@ -876,7 +876,7 @@ path{
         flex-wrap: wrap;
         justify-content: center;
     }
-    .dept_box::before, .dept::before, .dept::after, .managment_box::before, .org_header_2::before, .org_header::before{
+    .dept_box::before, .dept::before, .dept::after, .managment_box::before, .org_header_2::before, .org_header::before, .dept_head::before, .dept_head::after{
         display: none;
     }
 }
