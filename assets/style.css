@@ -701,6 +701,40 @@ path{
     display: none;
 }
 
+.country_tab_info ol{
+    display: inline-block;
+    width: 200px;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+    vertical-align: top;
+    width: max-content;
+    margin: 0 10px;
+}
+
+.dept_countries .country_tab_info ol li{
+    background: transparent;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.country_tab_info ol ol{
+    list-style: inside;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.dept_countries .country_tab_info ol ol li{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Info{
+    font-size: 18px;
+}
+
+
 /* ------RESPONSIVE------ */
 
 @media(max-width:1800px){
