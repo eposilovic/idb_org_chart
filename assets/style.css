@@ -469,8 +469,9 @@ hr{
 }
 
 .dept_popup{
-    width: min-content;
-    min-width: 75%;
+    width: max-content;
+    min-width: 35%;
+    max-width: 80%;
     position: fixed;
     top: 50%;
     transform: translatey(-50%);
@@ -491,6 +492,14 @@ hr{
     line-height: 1.5;
     color: #fff;
     font-weight: 600;
+}
+
+.dept_popup div h5{
+    font-weight: 500;
+}
+
+.dept_popup div h6{
+    font-weight: 400;
 }
 
 .dept_popup_head h4{
@@ -730,8 +739,10 @@ path{
     font-weight: 300;
 }
 
-.Info{
-    font-size: 18px;
+.Info h4{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
 }
 
 
