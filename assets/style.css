@@ -258,10 +258,10 @@ hr{
 .countries_wrap{
     display: flex;
     max-width: 1400px;
-    gap: 5px;
+    gap: 0 20px;
     flex-wrap: wrap;
     padding: 0 50px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .country{
@@ -331,13 +331,26 @@ hr{
 }
 
 .country_info ul{
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     padding: 0;
     list-style: none;
 }
 
+.country_info ul li{
+    margin: 0;
+}
+
 .country_info li{
-    margin: 10px 0;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 15px;
+    max-width: 220px;
+}
+
+.country_info li:nth-of-type(4){
+    display: block;
+    margin: 0 auto;
 }
 
 .country_info li a{
@@ -471,7 +484,7 @@ hr{
 .dept_popup{
     width: max-content;
     min-width: 35%;
-    max-width: 80%;
+    max-width: 50%;
     position: fixed;
     top: 50%;
     transform: translatey(-50%);
@@ -665,8 +678,9 @@ hr{
 .map_wrap{
     display: block;
     padding: 30px 0 40px;
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -763,7 +777,7 @@ path{
     }
 }
 
-@media(max-width: 1400px){
+@media(max-width: 1440px){
     .org_box, .dept_head{
         padding: 2px;
         max-width: 150px;
