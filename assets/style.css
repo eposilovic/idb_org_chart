@@ -310,7 +310,7 @@ hr{
 .country_info{
     background: #fff;
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.226);
-    width: 50%;
+    width: fit-content;
     gap: 10px;
     border: 3px solid var(--main_blue);
     border-radius: 5px;
@@ -678,7 +678,7 @@ hr{
 .map_wrap{
     display: block;
     padding: 30px 0 40px;
-    width: 80%;
+    width: 85%;
     text-align: center;
     margin: 0 auto;
     position: relative;
