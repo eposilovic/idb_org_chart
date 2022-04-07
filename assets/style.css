@@ -202,7 +202,7 @@ body{
     background: #30c4ec;
 }
 
-.dept_box::before{
+/* .dept_box::before{
     content: "";
     position: absolute;
     top: -20px;
@@ -210,7 +210,7 @@ body{
     width: 84%;
     height: 2px;
     background: #30c4ec;
-}
+} */
 
 .dept::before{
     content: "";
@@ -227,12 +227,24 @@ body{
 .dept::after{
     content: "";
     position: absolute;
-    bottom: -43px;
-    left: 52%;
-    transform: translateX(-50%);
+    top: -172px;
+    left: 57%;
+    transform: translateX(-50%) rotate(90deg);
     width: 2px;
-    height: 40px;
+    height: 300px;
     background: #30c4ec;
+}
+
+.dept:nth-of-type(1):after{
+    left: 141%;
+    height: 300px;
+    top: -172px;
+}
+
+.dept:nth-of-type(7):after{
+    left: -37%;
+    height: 300px;
+    top: -172px;
 }
 
 .dept_details h6{
@@ -583,6 +595,41 @@ hr{
     margin-bottom: 0;
 }
 
+.dept_head::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background: #30c4ec;
+}
+
+.dept_head:nth-of-type(1):before{
+    left: 55%;
+}
+
+.dept_head:nth-of-type(2):before{
+    left: 54%;
+}
+
+.dept_head:nth-of-type(3):before{
+    left: 53%;
+}
+
+.dept_head:nth-of-type(5):before{
+    left: 48%;
+}
+
+.dept_head:nth-of-type(6):before{
+    left: 47%;
+}
+
+.dept_head:nth-of-type(7):before{
+    left: 45%;
+}
+
 .dept_head::after {
     content: "";
     position: absolute;
@@ -775,6 +822,21 @@ path{
     .dept_countries ul{
         padding: 0;
     }
+    .dept_head:nth-of-type(7):before {
+        left: 52%;
+    }
+    .dept_head:nth-of-type(6):before {
+        left: 48%;
+    }
+    .dept_head:nth-of-type(3):before {
+        left: 49%;
+    }
+    .dept_head:nth-of-type(2):before {
+        left: 47%;
+    }
+    .dept_head:nth-of-type(1):before {
+        left: 47%;
+    }
 }
 
 @media(max-width: 1440px){
@@ -800,6 +862,12 @@ path{
     .dept{
         max-width: 140px;
         width: 100%;
+    }
+    .dept:nth-of-type(1):after{
+        left: 157%;
+    }
+    .dept:nth-of-type(7):after{
+        left: -52%;
     }
 }
 
