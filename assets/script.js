@@ -59,6 +59,7 @@ $(document).ready(function(){
 $(".close").on("click", function(e){
    e.stopPropagation();
    $(this).closest(".dept_countries_wrap").fadeOut();
+   $(this).closest(".country_info").slideUp();
    $(".dept_countries ul li").removeClass("tab_active");
    $(".dept_countries ul li:first-of-type").addClass("tab_active");
    $(".country_tab").hide();
