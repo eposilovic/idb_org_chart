@@ -842,6 +842,17 @@ path{
     color: #fff;
 }
 
+.country_info .close{
+    background: var(--main_blue);
+    color: #fff;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 5px;
+}
+
+.country_info .close:hover{
+    color: var(--main_black);
+}
 
 /* ------RESPONSIVE------ */
 
