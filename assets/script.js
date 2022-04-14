@@ -3,8 +3,8 @@ $(".country").on("click", function(e){
    var target = $(e.currentTarget);
    var div_height = $(".country_info").height();
    e.stopPropagation();
-   $(target).find(".country_info").slideToggle();
-   $(target).siblings().find(".country_info").delay(380).slideUp();
+   $(target).find(".country_info_wrap").fadeIn();
+   $(target).siblings().find(".country_info_wrap").delay(380).fadeOut();
 });
 
 
@@ -59,12 +59,13 @@ $(document).ready(function(){
 $(".close").on("click", function(e){
    e.stopPropagation();
    $(this).closest(".dept_countries_wrap").fadeOut();
-   $(this).closest(".country_info").slideUp();
+   $(this).closest(".country_info_wrap").fadeOut();
    $(".dept_countries ul li").removeClass("tab_active");
    $(".dept_countries ul li:first-of-type").addClass("tab_active");
    $(".country_tab").hide();
    $(".country_tab:first-of-type").show();
 });
+
 
 // COUNTRIES MAP
 var countryElements = document.getElementById('countries').childNodes;
@@ -72,8 +73,8 @@ var countryElements = document.getElementById('countries').childNodes;
     for (var i = 0; i < countryCount; i++) {
       countryElements[i].onclick = function() {
          var countryName = this.getAttribute('data-name'); 
-         if($(".country_info").hasClass(countryName)){
-         $('.'+countryName).slideDown();
+         if($(".country_info_wrap").hasClass(countryName)){
+         $('.'+countryName).fadeIn();
          }
       }
     }
