@@ -144,6 +144,7 @@ body{
     padding: 5px 0;
     position: relative;
     transition: .3s;
+
 }
 
 .dept_head .med_img{
@@ -595,6 +596,7 @@ hr{
     border-radius: 10px;
     padding: 10px;
     position: relative;
+    justify-content: flex-start;
     box-shadow: 3px 3px 5px #00000030;
     background: #ffffff75;
     height: auto;
@@ -609,6 +611,7 @@ hr{
 
 .dept_head h5{
     font-size: 11px;
+    font-weight: 500;
 }
 
 .dept_head_wrap{
@@ -872,7 +875,7 @@ path{
 @media(max-width:1800px){
     .dept_head, .dept_sub{
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .dept_details, .dept_head{
         width: auto;
