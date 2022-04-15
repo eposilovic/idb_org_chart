@@ -388,7 +388,8 @@ hr{
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    width: 60%;
+    width: fit-content;
+    max-width: 50%;
     line-height: 1.4;
     left: 0;
     right: 0;
@@ -671,7 +672,7 @@ hr{
 
 .country_tab{
     display: none;
-    padding: 5px;
+    padding: 5px 40px;
     text-align: center;
     color: #fff;
     background: linear-gradient(333deg, rgb(20 184 228) 0%, rgb(136 217 239) 75%);
@@ -800,7 +801,7 @@ path{
     vertical-align: top;
     width: max-content;
     margin: 0 10px;
-    padding-bottom: 5px;
+    padding: 0 0 5px 0;
 }
 
 .dept_countries .country_tab_info ol li{
