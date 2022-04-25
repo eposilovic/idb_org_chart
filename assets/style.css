@@ -272,7 +272,8 @@ hr{
 .countries_wrap{
     display: flex;
     max-width: 1400px;
-    gap: 0 20px;
+    /* gap: 0 20px; */
+    gap: 15px;
     flex-wrap: wrap;
     padding: 0 50px;
     justify-content: center;
@@ -282,12 +283,13 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50px;
+    /* width: 50px; */
+    width: auto;
     cursor: pointer;
 }
 
 .country img{
-    width: 50px;
+    width: 35px;
     image-rendering: -webkit-optimize-contrast;
     filter: drop-shadow(2px 4px 6px #00000028);
     transition: .3s;
@@ -297,6 +299,7 @@ hr{
     font-weight: 600;
     font-size: 15px;
     text-align: center;
+    display: none;
 }
 
 .country_info img{
@@ -306,6 +309,7 @@ hr{
 .country_info h4{
     font-size: 20px;
     margin-top: 0;
+    display: block;
 }
 
 .country:hover img{
@@ -325,11 +329,14 @@ hr{
     background: #fff;
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.226);
     width: fit-content;
+    max-height: 95vh;
+    max-width: 90vw;
+    overflow: auto;
     gap: 10px;
     border: 3px solid var(--main_blue);
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px 10px;
     list-style-type: none;
     line-height: 1.6;
     text-align: center;
@@ -341,7 +348,6 @@ hr{
     right: 0;
     margin: 0 auto;
     z-index: 2;
-    /* display: none; */
 }
 
 .country_info ul{
@@ -351,25 +357,75 @@ hr{
     list-style: none;
 }
 
+.country_info li:nth-of-type(4) ul li ul{
+    border-left: 1px solid var(--main_black);
+    margin-left: 8px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.country_info li:nth-of-type(5) ul li{
+    font-weight: 400;
+}
+
+.country_info ul:nth-child(2){
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.country_info ul:nth-child(2)>li{
+    padding: 5px;
+}
+
+.country_info li:nth-of-type(5) b{
+    display: none;
+}
+
 .country_info ul li{
-    margin: 0;
+    margin: 0 5px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.country_info ul li ul li{
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 10px 0 0;
+    margin-bottom: -11px;
+}
+
+.country_info ul li ul li::before{
+    margin-top: 8px;
+    margin-left: -11px;
+    content: "";
+    position: absolute;
+    background-color: var(--main_black);
+    width: 1.5px;
+    height: 10px;
+    transform: rotate(90deg);
 }
 
 .country_info li{
     display: inline-flex;
     flex-direction: column;
     margin: 15px;
-    max-width: 220px;
+    /* max-width: 220px; */
 }
 
-.country_info li:nth-child(3), .country_info li:nth-child(4), .country_info li:nth-child(5){
+/* .country_info li:nth-child(3), .country_info li:nth-child(4), .country_info li:nth-child(5){
     width: 130px;
     margin: 15px 5px;
-}
+} */
 
 .country_info li:nth-of-type(4){
     display: block;
     margin: 0 auto;
+}
+
+.country_info li:nth-of-type(4) ul li{
+    display: inline-flex;
+    margin: 0px 5px -11px 5px;
 }
 
 .country_info li a{
@@ -760,13 +816,13 @@ path{
     fill: lightgray; stroke: white;
 }
 
-[data-name="South_Africa"], [data-name="Botswana"], [data-name="Egypt"], [data-name="Ghana"], [data-name="Greece"], [data-name="Pakistan"], [data-name="Poland"], [data-name="Saudi_Arabia"], [data-name="Oman"], [data-name="Kuwait"], [data-name="Qatar"], [data-name="Romania"], [data-name="Canada"], [data-name="Serbia"], [data-name="Thailand"], [data-name="Bahrain"], [data-name="Bulgaria"], [data-name="Senegal"], [data-name="Croatia"], [data-name="Spain"]{
+[data-name="South_Africa"], [data-name="Botswana"], [data-name="Egypt"], [data-name="Ghana"], [data-name="Greece"], [data-name="Pakistan"], [data-name="Poland"], [data-name="Saudi_Arabia"], [data-name="Oman"], [data-name="Kuwait"], [data-name="Qatar"], [data-name="Romania"], [data-name="Canada"], [data-name="Serbia"], [data-name="Thailand"], [data-name="Bahrain"], [data-name="Bulgaria"], [data-name="Senegal"], [data-name="Croatia"], [data-name="Spain"], [data-name="Uganda"], [data-name="UAE"], [data-name="Turkey"], [data-name="Tanzania"], [data-name="Switzerland"], [data-name="Sweden"], [data-name="Sri_Lanka"], [data-name="Slovakia"], [data-name="Rwanda"], [data-name="Russia"], [data-name="Portugal"], [data-name="Palestine"], [data-name="Nigeria"], [data-name="Netherlands"], [data-name="Mexico"], [data-name="Malaysia"], [data-name="Madagascar"], [data-name="Kenya"], [data-name="Jordan"], [data-name="Ivory_Coast"], [data-name="Ireland"], [data-name="Iraq"], [data-name="Indonesia"], [data-name="India"], [data-name="Georgia"], [data-name="Denmark"], [data-name="Czech_Republic"], [data-name="Congo"], [data-name="Cameroon"], [data-name="Cambodia"], [data-name="Bangladesh"], [data-name="Australia"], [data-name="Algeria"], [data-name="Tunisia"]{
     fill: #4cd8ff;
     transition: .3s;
     cursor: pointer;
 }
 
-[data-name="South_Africa"]:hover, [data-name="Botswana"]:hover, [data-name="Egypt"]:hover, [data-name="Ghana"]:hover, [data-name="Greece"]:hover, [data-name="Pakistan"]:hover, [data-name="Poland"]:hover, [data-name="Saudi_Arabia"]:hover, [data-name="Oman"]:hover, [data-name="Kuwait"]:hover, [data-name="Qatar"]:hover, [data-name="Romania"]:hover, [data-name="Canada"]:hover, [data-name="Serbia"]:hover, [data-name="Thailand"]:hover, [data-name="Bahrain"]:hover, [data-name="Bulgaria"]:hover, [data-name="Senegal"]:hover, [data-name="Croatia"]:hover, [data-name="Spain"]:hover{
+[data-name="South_Africa"]:hover, [data-name="Botswana"]:hover, [data-name="Egypt"]:hover, [data-name="Ghana"]:hover, [data-name="Greece"]:hover, [data-name="Pakistan"]:hover, [data-name="Poland"]:hover, [data-name="Saudi_Arabia"]:hover, [data-name="Oman"]:hover, [data-name="Kuwait"]:hover, [data-name="Qatar"]:hover, [data-name="Romania"]:hover, [data-name="Canada"]:hover, [data-name="Serbia"]:hover, [data-name="Thailand"]:hover, [data-name="Bahrain"]:hover, [data-name="Bulgaria"]:hover, [data-name="Senegal"]:hover, [data-name="Croatia"]:hover, [data-name="Spain"]:hover, [data-name="Uganda"]:hover, [data-name="UAE"]:hover, [data-name="Turkey"]:hover, [data-name="Tanzania"]:hover, [data-name="Switzerland"]:hover, [data-name="Sweden"]:hover, [data-name="Sri_Lanka"]:hover, [data-name="Slovakia"]:hover, [data-name="Rwanda"]:hover, [data-name="Russia"]:hover, [data-name="Portugal"]:hover, [data-name="Palestine"]:hover, [data-name="Nigeria"]:hover, [data-name="Netherlands"]:hover, [data-name="Mexico"]:hover, [data-name="Malaysia"]:hover, [data-name="Madagascar"]:hover, [data-name="Kenya"]:hover, [data-name="Jordan"]:hover, [data-name="Ivory_Coast"]:hover, [data-name="Ireland"]:hover, [data-name="Iraq"]:hover, [data-name="Indonesia"]:hover, [data-name="India"]:hover, [data-name="Georgia"]:hover, [data-name="Denmark"]:hover, [data-name="Czech_Republic"]:hover, [data-name="Congo"]:hover, [data-name="Cameroon"]:hover, [data-name="Cambodia"]:hover, [data-name="Bangladesh"]:hover, [data-name="Australia"]:hover, [data-name="Algeria"]:hover, [data-name="Tunisia"]:hover{
     fill: var(--main_blue);
 }
 
@@ -969,4 +1025,3 @@ path{
 }
 
 /* ----FIREFIXES---- */
-

@@ -88,3 +88,11 @@ var countryElements = document.getElementById('countries').childNodes;
          $(".country_name").hide();
       }
     }
+
+    $(".country>img").on("mouseover", function(event){
+      var target = $(event.currentTarget).next("h4").text();
+      $(".country_name").show().text(target  );
+    })
+      .on("mouseleave", function(event){
+         $(".country_name").hide();
+      });
