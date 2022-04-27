@@ -410,7 +410,10 @@ hr{
     display: inline-flex;
     flex-direction: column;
     margin: 15px;
-    /* max-width: 220px; */
+}
+
+.country_info li:nth-of-type(-n+3){
+    max-width: 160px;
 }
 
 /* .country_info li:nth-child(3), .country_info li:nth-child(4), .country_info li:nth-child(5){
