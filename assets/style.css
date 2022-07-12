@@ -144,7 +144,25 @@ body{
     padding: 5px 0;
     position: relative;
     transition: .3s;
+}
 
+.seo_manager{
+    border-top: 2px solid var(--main_blue);
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.seo_manager .small_img{
+    width: 55px;
+    height: 55px;
+}
+
+.seo_manager h5{
+    font-size: 16px;
+}
+
+.seo_manager h6{
+    font-size: 11px;
 }
 
 .dept_head .med_img{
