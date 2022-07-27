@@ -134,6 +134,7 @@ body{
 
 .dept_details h4, .dept_details h5, .dept_details h6{
     margin: 5px;
+    text-align: center;
 }
 
 .dept_head, .dept_sub{
@@ -279,6 +280,7 @@ body{
     word-break: break-all;
     line-height: 1;
     display: block;
+    text-align: center;
 }
 
 hr{
@@ -685,6 +687,7 @@ hr{
 
 .dept_head h4, .dept_head h5{
     margin: 5px;
+    text-align: center;
 }
 
 .dept_head h5{
